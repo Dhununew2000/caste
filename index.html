@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Mobile View with Image</title>
+    <title>Responsive Web & Mobile View</title>
     <!-- Tailwind CSS for styling -->
     <script src="https://cdn.tailwindcss.com"></script>
     <!-- Google Fonts: Inter -->
@@ -20,15 +20,19 @@
 <body class="bg-white text-gray-800">
 
     <!-- Main container -->
-    <!-- This div uses flexbox to center the content vertically and horizontally. -->
-    <div class="min-h-screen flex items-center justify-center p-4">
+    <!-- This div uses flexbox to center the content vertically and horizontally on all screen sizes. -->
+    <div class="min-h-screen flex items-center justify-center p-4 sm:p-6 md:p-8">
 
-        <!-- Image container -->
-        <div>
-            <!-- The src attribute is updated with the new image link. -->
-            <img src='https://i.postimg.cc/BnvwdZX4/nami2-pdf-4-Copy.png' 
-                 alt='Document image'
-                 class="rounded-lg shadow-lg max-w-full h-auto">
+        <!-- Content container -->
+        <!-- We add a max-width here to constrain the image size on larger screens (tablets and desktops) -->
+        <!-- 'w-full' makes it responsive on mobile, 'sm:max-w-xl' caps the width on screens larger than 'sm'. -->
+        <div class="w-full sm:max-w-xl">
+            <!-- The image is now linked and uses the high-quality source from Imgbox. -->
+            <a href="https://imgbox.com/r3VHWppi" target="_blank">
+                <img src="https://images2.imgbox.com/93/dc/r3VHWppi_o.jpg" 
+                     alt="Document image"
+                     class="rounded-lg shadow-lg w-full h-auto">
+            </a>
         </div>
         
     </div>
